@@ -1,0 +1,66 @@
+import React, { Component } from 'react';
+import { AppRegistry, View, Image, StyleSheet,SafeAreaView,Button} from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    paddingTop:10,
+    },
+    stethoscope:{
+    width:"90%",
+    height:"30%",
+  
+    },
+  picture: {
+    width: 80,
+    height:80,
+    marginTop:10,
+  },
+ 
+  text:{
+  flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'left',
+      justifyContent: 'center',
+      paddingTop:70,
+      
+   },
+});
+
+class DisplayAnImage extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+       <Image
+          style={styles.stethoscope}
+          source={{uri: 'https://m.media-amazon.com/images/I/41GNQYs04DL.jpg'}}
+        
+        />
+        
+        <Image
+          style={styles.picture}
+          source={{uri: 'https://cdn.theconversation.com/avatars/428814/width238/image-20210203-15-1f64sdb.jpg'}}
+          
+        />
+          <View style={styles.text}>  
+<text>About</text>
+
+            <text>Lorem ipsum dolor sit amet, Ut enim a sedeiusmod.veniam,  quis aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum  excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                                                        
+            </text>
+            <SafeAreaView style={styles.container}>
+    <View>
+      <Button
+        title="Pay"
+        color="green"
+      />
+    </View>
+   
+  </SafeAreaView>
+</View>
+</View>
+    );
+  }
+}
+
+export default DisplayAnImage;
+ 
+
